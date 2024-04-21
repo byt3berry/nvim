@@ -27,37 +27,37 @@ local function mode()
 end
 
 local function git_branch()
-    local branch = vim.fn.system('git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d \'\n\'')
+    local branch = vim.fn.system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
 
     if string.len(branch) > 0 then
-        return '(git:' .. branch .. ')'
+        return "(git:" .. branch .. ")"
     else
-        return '(no git)'
+        return "(no git)"
     end
 end
 
 -- To choose highlights use `:highlight`
 function statusline()
     local statusline = {
-        '%<', -- start
+        "%<", -- start
         "%#RedrawDebugRecompose#", -- red background
         mode(), -- current mode
-        '%#DiagnosticOk#', -- green foreground
+        "%#DiagnosticOk#", -- green foreground
         git_branch(), -- git branch
-        '%#LineNr#', -- color 1
-        ' ',
-        '%m', -- modified flag
-        '%r', -- read-only flag
-        '%f', -- relative file name
-        '%=', -- separator
-        '%y', -- filetype
-        ' ',
-        '%p%%', -- percentage in file
-        ' ',
-        '%l:%c', -- position in file (row:column)
+        "%#LineNr#", -- color 1
+        " ",
+        "%m", -- modified flag
+        "%r", -- read-only flag
+        "%f", -- relative file name
+        "%=", -- separator
+        "%y", -- filetype
+        " ",
+        "%p%%", -- percentage in file
+        " ",
+        "%l:%c", -- position in file (row:column)
     }
 
-    return table.concat(statusline, '')
+    return table.concat(statusline, "")
 end
 
 vim.opt.laststatus=2

@@ -11,11 +11,11 @@ vim.opt.linebreak = true
 vim.opt.breakindent = true
 
 -- Sync clipboard between OS and Neovim
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 
 -- Preview substitutions live
 vim.opt.incsearch = true
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = "split"
 vim.opt.hlsearch = true
 
 -- Highlight current line
