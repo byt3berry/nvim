@@ -59,7 +59,7 @@ return require("packer").startup(function(use)
 		}
 	}
 
-    use "lukas-reineke/indent-blankline.nvim"
+    -- use "lukas-reineke/indent-blankline.nvim"
     use "eandrju/cellular-automaton.nvim" 
 
 end)
