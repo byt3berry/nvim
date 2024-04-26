@@ -62,5 +62,6 @@ return require("packer").startup(function(use)
     -- use "lukas-reineke/indent-blankline.nvim"
     use "eandrju/cellular-automaton.nvim" 
     use "ThePrimeagen/vim-be-good"
+    use "lewis6991/gitsigns.nvim"
 
 end)
