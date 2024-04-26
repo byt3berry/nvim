@@ -16,7 +16,7 @@ vim.opt.clipboard = "unnamedplus"
 -- Preview substitutions live
 vim.opt.incsearch = true
 vim.opt.inccommand = "split"
-vim.opt.hlsearch = true
+vim.opt.hlsearch = false
 
 -- Highlight current line
 vim.opt.cursorline = true
