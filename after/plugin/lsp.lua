@@ -49,7 +49,6 @@ require("mason-lspconfig").setup({
         pyright, -- Python
         rust_analyser, -- Rust
         snyk_ls, -- All
-        sourcery, -- Python
         typos_ls, -- All
     },
     handlers = {
