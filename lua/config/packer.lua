@@ -63,5 +63,11 @@ return require("packer").startup(function(use)
     use "eandrju/cellular-automaton.nvim" 
     use "ThePrimeagen/vim-be-good"
     use "lewis6991/gitsigns.nvim"
+    use "heavenshell/vim-pydocstring"
+
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 
 end)
