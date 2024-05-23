@@ -48,7 +48,6 @@ require("mason-lspconfig").setup({
         marksman, -- Markdown
         pyright, -- Python
         rust_analyser, -- Rust
-        snyk_ls, -- All
         typos_ls, -- All
     },
     handlers = {
