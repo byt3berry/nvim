@@ -36,18 +36,22 @@ local function git_branch()
     end
 end
 
+local function time()
+    return "[" .. os.date("%H:%M") .. "]"
+end
+
 -- To choose highlights use `:highlight`
 function statusline()
     local statusline = {
-        "%<", -- start
         "%#RedrawDebugRecompose#", -- red background
         mode(), -- current mode
         "%#DiagnosticOk#", -- green foreground
         git_branch(), -- git branch
-        "%#LineNr#", -- color 1
+        "%#LineNr#", -- default color
         " ",
         "%m", -- modified flag
         "%r", -- read-only flag
+        "%<", -- where to truncate
         "%f", -- relative file name
         "%=", -- separator
         "%y", -- filetype
@@ -55,6 +59,10 @@ function statusline()
         "%p%%", -- percentage in file
         " ",
         "%l:%c", -- position in file (row:column)
+        " ",
+        "%#DiagnosticOk#", -- green foreground
+        time(), -- current time
+        "%#LineNr#", -- default color
     }
 
     return table.concat(statusline, "")
