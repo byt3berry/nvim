@@ -5,7 +5,7 @@ lsp.preset("recommended")
 
 local cmp = require("cmp")
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
-local cmp_action = require("lsp-zero").cmp_action()
+local cmp_action = lsp.cmp_action()
 local cmp_mappings = lsp.defaults.cmp_mappings({
     ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
     ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
@@ -40,15 +40,15 @@ end)
 require("mason").setup({})
 require("mason-lspconfig").setup({
     ensure_installed = {
-        autotools_ls, -- Make
-        clangd, -- C
-        jdtls, -- Java
-        jqls, -- jq
-        jsonls, -- JSON
-        marksman, -- Markdown
-        pyright, -- Python
-        rust_analyser, -- Rust
-        typos_ls, -- All
+        "autotools_ls", -- Make
+        "clangd", -- C
+        "jdtls", -- Java
+        "jqls", -- jq
+        "jsonls", -- JSON
+        "marksman", -- Markdown
+        "pyright", -- Python
+        "rust_analyzer", -- Rust
+        "typos_lsp", -- All
     },
     handlers = {
         lsp.default_setup,
