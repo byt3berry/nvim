@@ -43,7 +43,7 @@ end
 -- To choose highlights use `:highlight`
 function statusline()
     local statusline = {
-        "%#RedrawDebugRecompose#", -- red background
+        "%#CurSearch#", -- red background
         mode(), -- current mode
         "%#DiagnosticOk#", -- green foreground
         git_branch(), -- git branch
