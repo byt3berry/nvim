@@ -18,10 +18,10 @@ vim.keymap.set("n", "<up>", "<cmd>echo \"Use k to move!!\"<CR>")
 vim.keymap.set("n", "<down>", "<cmd>echo \"Use j to move!!\"<CR>")
 
 -- Better window navigation
-vim.keymap.set("n", "<A-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<A-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<A-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<A-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+-- vim.keymap.set("n", "<A-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
+-- vim.keymap.set("n", "<A-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
+-- vim.keymap.set("n", "<A-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+-- vim.keymap.set("n", "<A-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- Resize with arrows
 vim.keymap.set("n", "<C-Up>", ":resize -2<CR>", { desc = "Extends the window to the top" })
@@ -44,8 +44,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Move cursor and screen up 1/2 
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Move next line at the end of current line" })
 
 -- Research stuff
-vim.keymap.set("n", "n", "nzzzv", { desc = "Go to next occurence" })
-vim.keymap.set("n", "N", "Nzzzv", { desc = "Go to previous occurence" })
+vim.keymap.set("n", "n", "nzzzv", { desc = "Go to next occurrence" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Go to previous occurrence" })
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
