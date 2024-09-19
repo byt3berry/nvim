@@ -62,4 +62,12 @@ return require("packer").startup(function(use)
     })
 
     use "alexghergh/nvim-tmux-navigation"
+    use {
+        "ionide/Ionide-vim",
+        ft = "fsharp",
+        dependencies = {
+            "neovim/nvim-lspconfig",
+        },
+        run = "make fsautocomplete",
+    }
 end)

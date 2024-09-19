@@ -17,6 +17,12 @@ vim.keymap.set("n", "<right>", "<cmd>echo \"Use l to move!!\"<CR>")
 vim.keymap.set("n", "<up>", "<cmd>echo \"Use k to move!!\"<CR>")
 vim.keymap.set("n", "<down>", "<cmd>echo \"Use j to move!!\"<CR>")
 
+-- Disable arrow keys in insert mode
+vim.keymap.set("i", "<left>", "<cmd>echo \"Use h to move!!\"<CR>")
+vim.keymap.set("i", "<right>", "<cmd>echo \"Use l to move!!\"<CR>")
+vim.keymap.set("i", "<up>", "<cmd>echo \"Use k to move!!\"<CR>")
+vim.keymap.set("i", "<down>", "<cmd>echo \"Use j to move!!\"<CR>")
+
 -- Better window navigation
 -- vim.keymap.set("n", "<A-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 -- vim.keymap.set("n", "<A-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
