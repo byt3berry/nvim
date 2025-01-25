@@ -19,7 +19,7 @@ vim.opt.inccommand = "split"
 vim.opt.hlsearch = false
 
 -- Highlight current line
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 
 -- Indentation stuff
 vim.opt.tabstop = 4

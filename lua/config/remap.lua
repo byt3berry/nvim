@@ -12,22 +12,11 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- Disable arrow keys in normal mode
-vim.keymap.set("n", "<left>", "<cmd>echo \"Use h to move!!\"<CR>")
-vim.keymap.set("n", "<right>", "<cmd>echo \"Use l to move!!\"<CR>")
-vim.keymap.set("n", "<up>", "<cmd>echo \"Use k to move!!\"<CR>")
-vim.keymap.set("n", "<down>", "<cmd>echo \"Use j to move!!\"<CR>")
-
--- Disable arrow keys in insert mode
-vim.keymap.set("i", "<left>", "<cmd>echo \"Use h to move!!\"<CR>")
-vim.keymap.set("i", "<right>", "<cmd>echo \"Use l to move!!\"<CR>")
-vim.keymap.set("i", "<up>", "<cmd>echo \"Use k to move!!\"<CR>")
-vim.keymap.set("i", "<down>", "<cmd>echo \"Use j to move!!\"<CR>")
-
--- Better window navigation
--- vim.keymap.set("n", "<A-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
--- vim.keymap.set("n", "<A-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
--- vim.keymap.set("n", "<A-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
--- vim.keymap.set("n", "<A-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+allModes = {"n", "v", "s", "i", "c", "!", "t"}
+vim.keymap.set(allModes, "<left>", "<cmd>echo \"Use h to move!!\"<CR>")
+vim.keymap.set(allModes, "<right>", "<cmd>echo \"Use l to move!!\"<CR>")
+vim.keymap.set(allModes, "<up>", "<cmd>echo \"Use k to move!!\"<CR>")
+vim.keymap.set(allModes, "<down>", "<cmd>echo \"Use j to move!!\"<CR>")
 
 -- Resize with arrows
 vim.keymap.set("n", "<C-Up>", ":resize -2<CR>", { desc = "Extends the window to the top" })
