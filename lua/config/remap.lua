@@ -12,7 +12,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- Disable arrow keys in normal mode
-allModes = {"n", "v", "s", "i", "c", "!", "t"}
+allModes = {"n", "v", "s", "i", "t"}
 vim.keymap.set(allModes, "<left>", "<cmd>echo \"Use h to move!!\"<CR>")
 vim.keymap.set(allModes, "<right>", "<cmd>echo \"Use l to move!!\"<CR>")
 vim.keymap.set(allModes, "<up>", "<cmd>echo \"Use k to move!!\"<CR>")
