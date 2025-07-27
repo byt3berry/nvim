@@ -2,6 +2,16 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = "●",       -- Or any you prefer
+    spacing = 1,
+  },
+  signs = true,         -- Gutter symbols
+  underline = true,
+  severity_sort = true,
+  update_in_insert = true, -- Optional
+})
 
 local cmp = require("cmp")
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
@@ -49,9 +59,7 @@ require("mason-lspconfig").setup({
         "rust_analyzer", -- Rust
         "typos_lsp", -- All
     },
-    handlers = {
-        lsp.default_setup,
-    },
+    automatic_enable = true,
 })
 
 lsp.setup()
